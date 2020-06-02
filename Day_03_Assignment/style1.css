@@ -1,0 +1,33 @@
+.b{
+    width: 100px;
+}
+.a{
+    height: 72px;
+    background-color: lightgrey;
+}
+.c{
+    float: right;
+    width: 71px;
+    position: relative;
+    bottom: 130px;
+}
+.t{
+    text-align: center;
+    position: relative;
+    bottom: 70px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    display: inline-block;
+    margin: 5px;
+    color: black;
+    padding-left: 120px;
+}
+.x{
+    bottom: 20px;
+    position: relative;
+    width: 100%;
+    background-color: lightcyan;
+}
