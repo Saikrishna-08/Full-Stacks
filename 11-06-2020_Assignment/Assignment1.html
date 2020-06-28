@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Username and password validation</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script>
+        $(function () {
+
+            $("form[name='registration']").validate({
+
+                rules: {
+
+                    firstname: "required",
+                    lastname: "required",
+                    mobile: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10,
+                    },
+                    email: {
+                        required: true,
+
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 10
+                    }
+                },
+
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    mobile: {
+                        minlength: "Your phone number must be 10 numbers long",
+                        maxlength: "Your phone number must be 10 numbers long"
+                    },
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long",
+                        maxlength: "Your password must be at most 10 characters long"
+                    },
+                    email: "Please enter a valid email address"
+                },
+
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: "Open Sans";
+            font-size: 14px;
+        }
+
+        .container {
+            width: 500px;
+            margin: 25px auto;
+        }
+
+        form {
+            padding: 20px;
+            background: #2c3e50;
+            color: #fff;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        form label,
+        form input,
+        form button {
+            border: 0;
+            margin-bottom: 3px;
+            display: block;
+            width: 100%;
+        }
+
+        form input {
+            height: 25px;
+            line-height: 25px;
+            background: #fff;
+            color: #000;
+            padding: 0 6px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        form button {
+            height: 30px;
+            line-height: 30px;
+            background: #e67e22;
+            color: #fff;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        form .error {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="" name="registration">
+
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" placeholder="John" />
+
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Doe" />
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" name="mobile" id="mobile" placeholder="9959941828" />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="john@doe.com" />
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" />
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
