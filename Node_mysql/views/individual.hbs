@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function change() {
+        var elem = document.getElementById("mb1");
+        if (elem.value == "ITEM ADDED") elem.value = "ADD TO CART";
+        else elem.value = "ITEM ADDED";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="brand">
+      <nav class="navbar navbar-dark bg-danger">
+        <span class="navbar-brand mb-0 h1">Laptop Store</span>
+        <div class="top-link">
+          <span class="wishlist lead">
+            <a href="/" class="text-white">Logout</a></span>
+
+          <span class="wishlist align-right lead">
+              <a href="/products" target="_self" class="text-white">Products</a></span>
+
+         <!-- <span class="wishlist align-right lead mx-3">
+              <a href="/contactus" target="_self" class="text-white">ContactUs</a></span>-->
+
+        </div>
+      </nav>
+    </div>
+    <!--main nav-->
+    <nav class="main-nav bg-dark" style="z-index: -1;">
+      <ul>
+        <li><a href="home.html" target="_self">Logout</a></li>
+        <li><a href="products.html" target="_self">Products</a></li>
+        <li><a href="contact.html" target="_self">ContactUs</a></li>
+        <li><a href="regis.html" target="_self">Register</a></li>
+        <li><a href="login.html" target="_self">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="image my-4 bg-light">
+      <img src="/indprod1.PNG" alt="" class="rounded mx-auto d-block" />
+    </div>
+    <div class="title my-2 text-center">
+      <h4>Asus VivoBook 14 Core i3 10th Gen - (4 GB/256 GB SSD)</h4>
+    </div>
+    <div class="details">
+      <ul style="margin-left: 450px;">
+        <li>Intel core i3 processsor</li>
+        <li>4GB DDR4 RAM</li>
+        <li>64-Bit operating sysytem</li>
+        <li>256GB SSD</li>
+        <li>35.56cm(14 Inch)Display</li>
+        <li>1 year Warranty</li>
+      </ul>
+    </div>
+    <div class="buttons my-2">
+      <input
+        onclick="change()"
+        type="button"
+        class="btn btn-warning btn-lg text-white"
+        id="mb1"
+        value="ADD TO CART"
+      />
+      <a href="/payment"><button type="submit" class="buy btn btn-success btn-lg">BUY NOW</button></a>
+    </div>
+  </body>
+</html>

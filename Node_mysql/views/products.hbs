@@ -1,0 +1,390 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css" />-->
+    <style>
+        .brand {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .main-nav {
+            position: sticky;
+            z-index: 1;
+            top: 0px;
+            height: 30px;
+        }
+
+        .top-link {
+            float: right;
+        }
+
+        body>div>nav>div>span:nth-child(1) {
+            margin-right: 30px;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            white-space: nowrap;
+        }
+
+        nav li {
+            list-style-type: none;
+            display: inline-block;
+            width: 25%;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .banner {
+            position: relative;
+        }
+
+        .banner img {
+            max-width: 100%;
+        }
+
+        .banner .welcome {
+            position: absolute;
+            left: 0;
+            top: 30%;
+            background-color: rgb(92, 91, 91);
+            color: white;
+            padding: 30px;
+        }
+
+        .banner h2 {
+            font-size: 52px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .b1 {
+            width: 10%;
+            height: 60px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+        }
+
+        .b2 {
+            width: 10%;
+            height: 60px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+        }
+
+        .b1 p {
+            top: 20px;
+            left: 20%;
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .b2 p {
+            top: 20px;
+            left: 30%;
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tip {
+            height: 300px;
+            position: relative;
+        }
+
+        .tips {
+            left: 700px;
+            border-radius: 5px;
+            position: absolute;
+            width: 100px;
+            padding: 10px;
+        }
+
+        .buttons {
+            position: absolute;
+            left: 630px;
+        }
+
+        /*home style*/
+        .bimg {
+            position: relative;
+        }
+
+        .log {
+            background-color: rgba(92, 91, 91, 0.5);
+            position: absolute;
+            top: 200px;
+            left: 400px;
+            height: 500px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brand">
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Laptop Store</span>
+            <div class="top-link">
+                <span class="wishlist lead"><a href="" class="text-dark">Wishlist</a></span>
+                <span class="wishlist align-right lead"><a href="" class="text-dark">MyCart</a></span>
+            </div>
+        </nav>
+    </div>
+    <!--main nav-->
+    <div class="brand">
+        <nav class="navbar navbar-dark bg-danger">
+            <span class="navbar-brand mb-0 h1">Laptop Store</span>
+            <div class="top-link">
+                <span class="wishlist lead"><a href="/" target="_self" class="text-white">Logout</a></span>
+                <span class="wishlist align-right lead"><a href="/products" target="_self"
+                        class="text-white">Products</a></span>
+             <!--   <span class="wishlist align-right lead mx-3"><a href="/contactus" target="_self"
+                        class="text-white">ContactUs</a></span>-->
+            </div>
+        </nav>
+    </div>
+    <!--filter-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 bg-light text-center border border-dark">
+                <label class="lead">Filters</label>
+                <div class="processors my-4">
+                    <p class="text-left text-success">PROCESSOR</p>
+                    <div class="text-left">
+                        <form action="" method="get">
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Core i3</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Core i5</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Core i7</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Core i9</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="bran my-4">
+                    <p class="text-left text-success">BRAND</p>
+                    <div class="text-left">
+                        <form action="" method="get">
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Apple</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Asus</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Dell</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">HP</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="price my-4">
+                    <p class="text-left text-success">PRICE RANGE</p>
+                    <div class="text-left">
+                        <form action="" method="get">
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Rs 20,000-30,000</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Rs 30,000-40,000</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Rs 40,000-50,000</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Above 50,000</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--products-->
+            <br><br>
+            <div class="col-10 bg-light">
+                <a href="/individual" target="_self" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod1.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                HP 15q Core i3 8th Gen - (4 GB/1 TB HDD/Windows 10 Home)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-34,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod2.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Lenovo Ideapad S145 Core i3 8th Gen - (4 GB/1 TB HDD/DOS)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-28,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod3.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Asus VivoBook 14 Core i3 10th Gen - (4 GB/256 GB SSD)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-44,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod4.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Asus VivoBook 15 Core i5 8th Gen - (8 GB/1 TB HDD)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-54,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div class="img my-4">
+                            <img src="/prod1.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                HP 15q Core i3 8th Gen - (4 GB/1 TB HDD/Windows 10 Home)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-34,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" target="_self" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod1.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                HP 15q Core i3 8th Gen - (4 GB/1 TB HDD/Windows 10 Home)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-34,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod2.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Lenovo Ideapad S145 Core i3 8th Gen - (4 GB/1 TB HDD/DOS)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-28,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod3.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Asus VivoBook 14 Core i3 10th Gen - (4 GB/256 GB SSD)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-44,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center border-bottom">
+                        <div class="img my-4">
+                            <img src="/prod4.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                Asus VivoBook 15 Core i5 8th Gen - (8 GB/1 TB HDD)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-54,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="/individual" class="text-dark">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div class="img my-4">
+                            <img src="/prod1.PNG" alt="" class="img-thumbnail" height="180px" width="180px"/>
+                        </div>
+                        <div class="name">
+                            <h5 class="text-dark-50 lead">
+                                HP 15q Core i3 8th Gen - (4 GB/1 TB HDD/Windows 10 Home)
+                            </h5>
+                        </div>
+                        <div class="rate">
+                            <h5 class="lead text-dark font-weight-bold">RS-34,000/-</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
